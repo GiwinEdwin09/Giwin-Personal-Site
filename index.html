@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giwin Edwin Omesh · Software engineer</title>
+  <meta name="description" content="Giwin Vincent Edwin Omesh, CS at UC Santa Cruz. I build machine learning systems that ship: forecasting models, multi-agent AI, and spatial ML.">
+  <meta property="og:title" content="Giwin Edwin Omesh · Software engineer">
+  <meta property="og:description" content="CS @ UC Santa Cruz. Forecasting models, multi-agent AI, and spatial ML.">
+  <meta property="og:url" content="https://giwin.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="giwin.dev">
+  <meta property="og:image" content="https://giwin.dev/og.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Giwin Vincent Edwin Omesh, software engineer, with a 3D point cloud of projects">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://giwin.dev/og.png?v=2">
+  <link rel="canonical" href="https://giwin.dev/">
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0d'/%3E%3Ccircle cx='10' cy='20' r='3' fill='%235DCAA5'/%3E%3Ccircle cx='21' cy='10' r='3' fill='%237F77DD'/%3E%3Ccircle cx='22' cy='22' r='2' fill='%23F0997B'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to projects</a>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="dot dot-teal"></span><span class="dot dot-violet"></span><span class="dot dot-coral"></span>
+      <span class="brand-name">giwin.</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#work">work</a>
+      <a href="#timeline">timeline</a>
+      <a href="#stack">stack</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <canvas id="latent" aria-hidden="true"></canvas>
+      <div class="hero-copy">
+        <p class="eyebrow mono">// CS @ UC Santa Cruz · class of 2027</p>
+        <h1>Giwin Vincent<br>Edwin Omesh</h1>
+        <p class="tagline mono"><span class="prompt">&gt;</span> <span id="typed">embedding ideas into products</span><span class="caret" aria-hidden="true">_</span></p>
+        <p class="lede">I build machine learning systems that ship: match-forecasting models, councils of AI agents, and spatial models that fix real map data. I care about honest evaluation as much as the model itself.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn" href="https://github.com/GiwinEdwin09" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/giwin09/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="legend mono" aria-hidden="true">
+        <span><i class="dot dot-teal"></i>machine learning</span>
+        <span><i class="dot dot-violet"></i>agents and systems</span>
+        <span><i class="dot dot-coral"></i>product engineering</span>
+        <span class="hint">hover a labeled point</span>
+      </div>
+      <div id="tip" class="tip mono" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-head">
+        <p class="mono idx">01 / selected work</p>
+        <h2>Projects, as points in the space</h2>
+      </div>
+
+      <article class="project" data-cluster="teal" id="prem-predict">
+        <div class="project-meta mono">
+          <span class="tag tag-teal">forecasting</span>
+          <span>Mar 2026 – present</span>
+          <span class="coord">z = [0.82, -0.14, 0.37]</span>
+        </div>
+        <h3>Prem Predict</h3>
+        <p class="project-sub">A Premier League match-forecasting product, from raw data to a live site.</p>
+        <p>Ingests 33 seasons of match and player data, builds leakage-safe rolling pre-match features, and serves calibrated home, draw, and away probabilities. The production model is Dixon-Coles with ridge-shrunk team ratings and time decay, and an XGBoost blend is only promoted when a gameweek-block bootstrap confidence interval says it actually wins. Users can sign in and save lineup scenarios to re-run against the current model.</p>
+        <dl class="metrics">
+          <div><dt>matches in final fit</dt><dd>12,809</dd></div>
+          <div><dt>walk-forward accuracy</dt><dd>46.6%</dd></div>
+          <div><dt>log loss</dt><dd>1.028</dd></div>
+          <div><dt>RPS</dt><dd>0.209</dd></div>
+        </dl>
+        <svg class="spark" viewBox="0 0 300 48" preserveAspectRatio="none" aria-hidden="true">
+          <polyline points="0,6 30,14 60,21 90,26 120,30 150,33 180,35 210,37 240,38 270,39 300,39" />
+        </svg>
+        <p class="spark-label mono">log loss falls across model iterations (illustrative)</p>
+        <ul class="stack-list mono">
+          <li>Python</li><li>XGBoost</li><li>Dixon-Coles</li><li>FastAPI</li><li>Next.js</li><li>Supabase</li><li>Docker</li>
+        </ul>
+        <div class="links">
+          <a href="https://fpl-predictor-bay.vercel.app" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="https://github.com/GiwinEdwin09/FPL-Predictor" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-cluster="violet" id="magi">
+        <div class="project-meta mono">
+          <span class="tag tag-violet">multi-agent AI</span>
+          <span>Oct 2026 · UCSC AI Hackathon</span>
+          <span class="coord">z = [-0.61, 0.73, 0.12]</span>
+        </div>
+        <h3>MAGI: Incident Council</h3>
+        <p class="project-sub">Three AI agents with competing mandates negotiate a live production incident.</p>
+        <p>One agent restores service, one contains harm, one protects customers, and each sees only the evidence it's entitled to. They propose blind, rank options with a Schulze vote, critique and amend, and act alone only on reversible steps they agree on. When they genuinely disagree about something irreversible, MAGI phones a human with the crux. I built an evaluation harness on 13 decision points adapted from real postmortems (Cloudflare, GitLab, AWS S3, Knight Capital) and reported the results honestly, including where the council lost to simpler baselines.</p>
+        <dl class="metrics">
+          <div><dt>agents</dt><dd>3</dd></div>
+          <div><dt>labeled decision points</dt><dd>13</dd></div>
+          <div><dt>harmful actions run</dt><dd>0%</dd></div>
+          <div><dt>false evidence rejected</dt><dd>3/3</dd></div>
+        </dl>
+        <div class="council" aria-hidden="true">
+          <span class="node n1">restore</span>
+          <span class="node n2">contain</span>
+          <span class="node n3">protect</span>
+          <span class="node human">human</span>
+        </div>
+        <ul class="stack-list mono">
+          <li>Python</li><li>FastAPI</li><li>TypeScript</li><li>OpenAI / Anthropic APIs</li><li>n8n</li><li>Twilio</li><li>SQLite</li>
+        </ul>
+        <div class="links">
+          <a href="https://magi-incident-council.onrender.com" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/GiwinEdwin09/magi-incident-council" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="timeline" class="section">
+      <div class="section-head">
+        <p class="mono idx">02 / training log</p>
+        <h2>Timeline at UC Santa Cruz</h2>
+      </div>
+      <ol class="log">
+        <li>
+          <p class="mono epoch">epoch 06 · Oct 2026</p>
+          <h3>MAGI: Incident Council <span class="org">UCSC AI Hackathon</span></h3>
+          <p>Multi-agent incident response built over a hackathon weekend for the Cisco Outshift / AGNTCY cloud track.</p>
+        </li>
+        <li>
+          <p class="mono epoch">epoch 05 · 2026</p>
+          <h3>1st place, NVIDIA Cloud Track <span class="org">Hack-a-Claw, Baskin Engineering</span></h3>
+          <p>Co-built ClawForge, an AI agent factory for small businesses: describe a need in plain English and get an agent with tools, memory, guardrails, and a deployment plan. Built on NVIDIA Nemotron and Brev.</p>
+        </li>
+        <li>
+          <p class="mono epoch">epoch 04 · Jan – Mar 2026</p>
+          <h3>Research <span class="org">Overture Maps Foundation</span></h3>
+          <p>TruePin: an XGBoost classifier on Uber H3 spatial features to correct map POI entrance coordinates, beating the Overture baseline by 7%. Presented to engineers from Amazon, Meta, Microsoft, and TomTom.</p>
+        </li>
+        <li>
+          <p class="mono epoch">epoch 03 · May – Jun 2025</p>
+          <h3>Software engineer <span class="org">LAIQA</span></h3>
+          <p>Shipped a real-time biometric tracking module on Apple Watch and Fitbit APIs, containerized MongoDB services, and contributed to an HRV-based stress detection algorithm.</p>
+        </li>
+        <li>
+          <p class="mono epoch">epoch 02 · Apr – Jun 2024</p>
+          <h3>Developer intern <span class="org">Here For You</span></h3>
+          <p>Worked on a platform built to support people going through a tough time.</p>
+        </li>
+        <li>
+          <p class="mono epoch">epoch 01 · Sep 2023 – Apr 2024</p>
+          <h3>Software engineer <span class="org">Soshal</span></h3>
+          <p>Full-stack developer on a Flutter app for UCSC students to discover club events, from MVP to university pitch.</p>
+        </li>
+        <li>
+          <p class="mono epoch">init · Sep 2023</p>
+          <h3>B.S. Computer Science <span class="org">UC Santa Cruz</span></h3>
+          <p>Expected June 2027.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="stack" class="section">
+      <div class="section-head">
+        <p class="mono idx">03 / feature space</p>
+        <h2>What I work with</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <p class="mono stack-title"><i class="dot dot-teal"></i>ml and data</p>
+          <p>Python, XGBoost, scikit-learn, CNNs, GeoPandas, H3, probabilistic models, calibration, cross-validation</p>
+        </div>
+        <div class="stack-card">
+          <p class="mono stack-title"><i class="dot dot-violet"></i>agents and llms</p>
+          <p>Multi-agent protocols, OpenAI and Anthropic APIs, NVIDIA Nemotron, prompt engineering, eval harnesses</p>
+        </div>
+        <div class="stack-card">
+          <p class="mono stack-title"><i class="dot dot-coral"></i>product engineering</p>
+          <p>FastAPI, Next.js, TypeScript, React Native, Flutter, PostgreSQL, MongoDB, Docker, CI/CD</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="mono idx">04 / inference</p>
+      <h2>Let's build something.</h2>
+      <p class="lede">I'm open to ML engineering and software engineering internships. The quickest way to reach me is email.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:edwin.giwin@gmail.com">edwin.giwin@gmail.com</a>
+        <a class="btn" href="https://github.com/GiwinEdwin09" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/giwin09/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year">2026</span> Giwin Vincent Edwin Omesh</span>
+    <span>loss converged ✓</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
