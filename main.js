@@ -65,6 +65,7 @@
   const anchors = [
     { c: "teal", p: [0.62, -0.22, 0.32], title: "Prem Predict", sub: "Dixon-Coles + XGBoost forecasting", href: "#prem-predict" },
     { c: "teal", p: [0.42, -0.02, 0.05], title: "TruePin", sub: "Overture Maps · +7% over baseline", href: "#timeline" },
+    { c: "teal", p: [0.72, -0.06, 0.18], title: "Ghostline", sub: "physics lab · ghost-overlay proof", href: "#ghostline" },
     { c: "violet", p: [-0.42, 0.52, -0.1], title: "MAGI", sub: "three-agent incident council", href: "#magi" },
     { c: "violet", p: [-0.18, 0.32, -0.38], title: "ClawForge", sub: "1st place · NVIDIA Cloud Track", href: "#timeline" },
     { c: "coral", p: [0.2, 0.62, 0.62], title: "LAIQA", sub: "real-time biometric tracking", href: "#timeline" },
